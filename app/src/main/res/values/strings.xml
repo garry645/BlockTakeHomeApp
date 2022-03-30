@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BlockTakeHomeApp</string>
+    <string name="uuid_label">UUID: </string>
+    <string name="phone_number_label">Phone Number: </string>
+    <string name="email_label">Email: </string>
+    <string name="biography_label"><b>Biography:</b></string>
+    <string name="employee_search_et_text">Search for an Employee:</string>
+    <string name="empty_employee_list_string">There are no employees to show!</string>
+    <string name="unavailable_string">Unavailable</string>
+</resources>

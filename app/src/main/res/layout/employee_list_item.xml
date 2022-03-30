@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_small"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/employee_list_item_background"
+    android:padding="@dimen/spacing_small">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/expandImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:src="@drawable/ic_baseline_expand_more_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/employeePhotoSmallIV"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/employeeFullNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/employeePhotoSmallIV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Software" />
+
+    <TextView
+        android:id="@+id/employeeTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeeFullNameTV"
+        tools:text="FULL_TIME" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/employeePhotoLargeIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeeTypeTV" />
+
+    <TextView
+        android:id="@+id/uuid_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/uuid_label"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/employeeUUIDTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeePhotoLargeIV" />
+
+    <TextView
+        android:id="@+id/employeeUUIDTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/uuid_label"
+        app:layout_constraintTop_toBottomOf="@id/employeePhotoLargeIV" />
+
+    <TextView
+        android:id="@+id/employee_phone_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/phone_number_label"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/employeePhoneNumberTV"
+        app:layout_constraintTop_toBottomOf="@id/uuid_label" />
+
+    <TextView
+        android:id="@+id/employeePhoneNumberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/employee_phone_number_label"
+        app:layout_constraintTop_toBottomOf="@id/employeeUUIDTV" />
+
+    <TextView
+        android:id="@+id/employee_email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/email_label"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/employeeEmailAddressTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employee_phone_number_label" />
+
+    <TextView
+        android:id="@+id/employeeEmailAddressTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/employee_email_label"
+        app:layout_constraintTop_toBottomOf="@id/employeePhoneNumberTV" />
+
+    <TextView
+        android:id="@+id/biographyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small"
+        android:text="@string/biography_label"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/employeeEmailAddressTV" />
+
+    <TextView
+        android:id="@+id/employeeBiographyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/spacing_small"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:gravity="start"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biographyLabel"
+        tools:text="This is an extremely long biography. This is an extremely long biography. This is an extremely long biography. This is an extremely long biography" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
